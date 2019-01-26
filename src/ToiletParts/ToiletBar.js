@@ -16,6 +16,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 import logo from '../logo.png';
 import instaLogo from '../insta.png'
@@ -132,7 +133,7 @@ class PrimarySearchAppBar extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar style={{backgroundColor: "#A7A7A7"}}>
-            <img src={logo} alt="RateMyToilet" width="10%"/>
+            <Link to='/Home'><img src={logo} alt="RateMyToilet" width="200vw" height="50vw"/></Link>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
                 <SearchIcon />

@@ -1,23 +1,35 @@
 .blueSection{
   position:relative;
-  height: 10vh;
+  height: 20vh;
   width: 100%;
 }
 
 .bottomHome{
   position:absolute;
-  bottom: 0;
+  bottom: 1;
   width: 100%;
-  height: 65vh;
+  height: 70vh;
   background-color: white;
+  float: center;
+  align-items: center;
+  display: flex;
+}
+
+.toiletsHome{
+  position: relative;
+  justify-content: center;
+  padding-top: 2vh;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 .findToilet{
-  float: left;
-  padding-left: 20%;
+  padding: 4vw;
 }
 
 .rateToilet{
-  float: right;
-  padding-right: 20%;
+  padding: 4vw;
 }
