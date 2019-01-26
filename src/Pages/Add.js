@@ -20,6 +20,7 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import BuildingList from "./BuildingList.js";
+import Gender from "./Gender.js";
 
 const styles = theme => ({
   root: {
@@ -48,7 +49,7 @@ function getStepContent(step) {
     case 0:
       return <BuildingList/> ;
     case 1:
-      return 'Images of bathroom options';
+      return <Gender/>;
     case 2:
       return `Floor selection thingy`;
     case 3:
