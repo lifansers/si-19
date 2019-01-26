@@ -1,26 +1,145 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import './pages.css';
+import Input from '@material-ui/core/Input';
+import InputBase from '@material-ui/core/InputBase';
+import InputLabel from '@material-ui/core/InputLabel';
+import TextField from '@material-ui/core/TextField';
+import FormControl from '@material-ui/core/FormControl';
+import brown from '@material-ui/core/colors/brown';
+import OutlinedInput from '@material-ui/core/OutlinedInput';
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+import Stepper from '@material-ui/core/Stepper';
+import Step from '@material-ui/core/Step';
+import StepLabel from '@material-ui/core/StepLabel';
+import StepContent from '@material-ui/core/StepContent';
+import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import BuildingList from "./BuildingList.js";
 
-class Add extends Component {
+const styles = theme => ({
+  root: {
+    width: '100%',
+  },
+  button: {
+    marginTop: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+  },
+  actionsContainer: {
+    marginBottom: theme.spacing.unit * 2,
+  },
+  resetContainer: {
+    padding: theme.spacing.unit * 3,
+  },
 
-  constructor(){
-    super()
-    this.state = {loaded: false}
-  }
+});
 
-  handleChange(){
-    this.setState({loaded: true})
-  }
 
-  render(){
-    return(
-      <div></div>
-    )
+function getSteps() {
+  return ['Building', 'Gender of Bathroom', 'Floor', 'Rate the Toilet', 'Poop Experience', 'Photos'];
+}
+
+function getStepContent(step) {
+  switch (step) {
+    case 0:
+      return <BuildingList/> ;
+    case 1:
+      return 'Images of bathroom options';
+    case 2:
+      return `Floor selection thingy`;
+    case 3:
+      return 'Rating toilets pics';
+    case 4:
+      return 'Poop experience text box';
+    case 5:
+      return 'Photos';
+
+    default:
+      return 'Unknown step';
   }
 }
 
+class Add extends React.Component {
 
-export default Add;
+  state = {
+     activeStep: 0,
+   };
+
+   handleNext = () => {
+     this.setState(state => ({
+       activeStep: state.activeStep + 1,
+     }));
+   };
+
+   handleBack = () => {
+     this.setState(state => ({
+       activeStep: state.activeStep - 1,
+     }));
+   };
+
+   handleReset = () => {
+     this.setState({
+       activeStep: 0,
+     });
+   };
+
+render(){
+  const { classes } = this.props;
+  const steps = getSteps();
+  const { activeStep } = this.state;
+
+  return (
+    <div className={classes.root}>
+
+       <Stepper activeStep={activeStep} orientation="vertical">
+         {steps.map((label, index) => (
+           <Step key={label}>
+             <StepLabel>{label}</StepLabel>
+             <StepContent>
+               <Typography>{getStepContent(index)}</Typography>
+               <div className={classes.actionsContainer}>
+                 <div>
+                   <Button
+                     disabled={activeStep === 0}
+                     onClick={this.handleBack}
+                     className={classes.button}
+                   >
+                     Back
+                   </Button>
+                   <Button
+                     variant="contained"
+                     color="primary"
+                     onClick={this.handleNext}
+                     className={classes.button}
+                   >
+                     {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+                   </Button>
+                 </div>
+               </div>
+             </StepContent>
+           </Step>
+         ))}
+       </Stepper>
+       {activeStep === steps.length && (
+         <Paper square elevation={0} className={classes.resetContainer}>
+           <Typography>All steps completed - you&apos;ve finished your review.</Typography>
+           <Button onClick={this.handleReset} className={classes.button}>
+             Reset
+           </Button>
+         </Paper>
+       )}
+
+    </div>
+  );
+}
+}
+
+Add.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Add);
