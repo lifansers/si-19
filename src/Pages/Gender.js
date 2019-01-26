@@ -32,8 +32,8 @@ class Gender extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div>
-        <img src={female} alt="female"/>
+      <div class='noWrapFlex'>
+        <div className='genderSpace'><img src={female} alt="female"/>
         <Radio
           checked={this.state.selectedValue === 'a'}
           onChange={this.handleChange}
@@ -45,8 +45,9 @@ class Gender extends React.Component {
             checked: classes.checked,
           }}
         />
+        </div>
 
-        <div className='genderSpace'><img src={male} alt="male"/></div>
+        <div className='genderSpace'><img src={male} alt="male"/>
         <Radio
           checked={this.state.selectedValue === 'b'}
           onChange={this.handleChange}
@@ -58,8 +59,9 @@ class Gender extends React.Component {
             checked: classes.checked,
           }}
         />
+        </div>
 
-        <img src={unisex} alt="unisex"/>
+        <div className='genderSpace'><img src={unisex} alt="unisex"/>
         <Radio
           checked={this.state.selectedValue === 'c'}
           onChange={this.handleChange}
@@ -71,6 +73,8 @@ class Gender extends React.Component {
             checked: classes.checked,
           }}
         />
+        </div>
+
       </div>
     );
   }

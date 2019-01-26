@@ -21,6 +21,8 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import BuildingList from "./BuildingList.js";
 import Gender from "./Gender.js";
+import Floor from "./Floor.js";
+import PoopieBoy from "./PoopieBoy.js";
 
 const styles = theme => ({
   root: {
@@ -51,13 +53,13 @@ function getStepContent(step) {
     case 1:
       return <Gender/>;
     case 2:
-      return `Floor selection thingy`;
+      return <Floor/>;
     case 3:
       return 'Rating toilets pics';
     case 4:
       return 'Poop experience text box';
     case 5:
-      return 'Photos';
+      return <PoopieBoy/>;
 
     default:
       return 'Unknown step';
@@ -94,6 +96,7 @@ render(){
   const { activeStep } = this.state;
 
   return (
+    <div className='addHome'><div className='rateToilet'>
     <div className={classes.root}>
 
        <Stepper activeStep={activeStep} orientation="vertical">
@@ -134,6 +137,7 @@ render(){
          </Paper>
        )}
 
+    </div></div>
     </div>
   );
 }

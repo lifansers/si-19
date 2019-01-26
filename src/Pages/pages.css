@@ -26,6 +26,17 @@
   padding-right: 1vw;
 }
 
+.addHome{
+  position: relative;
+  /* justify-content: center; */
+  padding-top: 2vh;
+  display: flex;
+  /* align-items: center; */
+  width: 80%;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
 .findToilet{
   padding: 4vw;
 }
@@ -36,4 +47,16 @@
 
 .genderSpace{
   padding: 4vw;
+}
+
+.noWrapFlex {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: bottom;
+}
+
+.yesWrapFlex {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 90%; */
 }
