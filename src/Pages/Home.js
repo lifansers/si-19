@@ -32,9 +32,9 @@ class Home extends Component {
 
         <div className='toiletsHome'>
           <div className='findToilet'>
-            <Button variant="contained" width="125%">
+            <Link to= '/Search'><Button variant="contained" width="125%">
               <img src={find} alt="find toilet" />
-            </Button>
+            </Button></Link>
           </div>
 
           <div className='rateToilet'>

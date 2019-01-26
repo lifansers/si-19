@@ -70,9 +70,9 @@ class BuildingList extends React.Component {
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={1}>Cathedral of Learning</MenuItem>
+            <MenuItem value={2}>Benedum</MenuItem>
+            <MenuItem value={3}>David Lawrence</MenuItem>
           </Select>
         </FormControl>
       </form>

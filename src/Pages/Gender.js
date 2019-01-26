@@ -5,6 +5,9 @@ import brown from '@material-ui/core/colors/brown';
 import Radio from '@material-ui/core/Radio';
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
+import male from '../male.PNG';
+import female from '../female.PNG';
+import unisex from '../unisex.PNG';
 
 const styles = {
   root: {
@@ -30,6 +33,7 @@ class Gender extends React.Component {
 
     return (
       <div>
+        <img src={female} alt="female"/>
         <Radio
           checked={this.state.selectedValue === 'a'}
           onChange={this.handleChange}
@@ -41,6 +45,8 @@ class Gender extends React.Component {
             checked: classes.checked,
           }}
         />
+
+        <div className='genderSpace'><img src={male} alt="male"/></div>
         <Radio
           checked={this.state.selectedValue === 'b'}
           onChange={this.handleChange}
@@ -52,6 +58,8 @@ class Gender extends React.Component {
             checked: classes.checked,
           }}
         />
+
+        <img src={unisex} alt="unisex"/>
         <Radio
           checked={this.state.selectedValue === 'c'}
           onChange={this.handleChange}
