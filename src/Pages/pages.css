@@ -1,0 +1,23 @@
+.blueSection{
+  position:relative;
+  height: 10vh;
+  width: 100%;
+}
+
+.bottomHome{
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  height: 65vh;
+  background-color: white;
+}
+
+.findToilet{
+  float: left;
+  padding-left: 20%;
+}
+
+.rateToilet{
+  float: right;
+  padding-right: 20%;
+}
