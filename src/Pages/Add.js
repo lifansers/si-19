@@ -22,6 +22,7 @@ import Typography from '@material-ui/core/Typography';
 import BuildingList from "./BuildingList.js";
 import Gender from "./Gender.js";
 import Floor from "./Floor.js";
+import PoopExperience from "./PoopExperience.js";
 import PoopieBoy from "./PoopieBoy.js";
 
 const styles = theme => ({
@@ -57,7 +58,7 @@ function getStepContent(step) {
     case 3:
       return 'Rating toilets pics';
     case 4:
-      return 'Poop experience text box';
+      return <PoopExperience/>;
     case 5:
       return <PoopieBoy/>;
 
