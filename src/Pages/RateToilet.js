@@ -17,6 +17,9 @@ import SadAir from '../Poops/SadAir.jpg';
 import SadNose from '../Poops/SadNose.jpg';
 import SadSink from '../Poops/SadSink.jpg';
 import SadBroom from '../Poops/SadBroom.jpg';
+import Air from './Air.js';
+import Nose from './Nose.js';
+import Sink from './Sink.js';
 
 const styles = {
   root: {
@@ -43,57 +46,15 @@ class RateToilet extends React.Component {
     return (
       <div>
 
+      Cleanliness
       <div class='noWrapFlex'>
-        <div className='genderSpace'><img src={HappyNose} alt="HappyNose" height="150vh"/>
-        <Radio
-          checked={this.state.selectedValue === 'a'}
-          onChange={this.handleChange}
-          value="a"
-          name="radio-button-demo"
-          aria-label="A"
-          classes={{
-            root: classes.root,
-            checked: classes.checked,
-          }}
-        />
-        </div>
-        <div className='genderSpace'><img src={MehNose} alt="MehNose" height="150vh"/>
-        <Radio
-          checked={this.state.selectedValue === 'b'}
-          onChange={this.handleChange}
-          value="b"
-          name="radio-button-demo"
-          aria-label="B"
-          classes={{
-            root: classes.root,
-            checked: classes.checked,
-          }}
-        />
-        </div>
-        <div className='genderSpace'><img src={SadNose} alt="SadNose" height="150vh"/>
-        <Radio
-          checked={this.state.selectedValue === 'c'}
-          onChange={this.handleChange}
-          value="c"
-          name="radio-button-demo"
-          aria-label="C"
-          classes={{
-            root: classes.root,
-            checked: classes.checked,
-          }}
-        />
-        </div>
-        </div>
-
-
-        <div class='noWrapFlex'>
           <div className='genderSpace'><img src={HappyBroom} alt="HappyBroom" height="150vh"/>
           <Radio
-            checked={this.state.selectedValue === 'a'}
+            checked={this.state.selectedValue === 'd'}
             onChange={this.handleChange}
-            value="a"
+            value="d"
             name="radio-button-demo"
-            aria-label="A"
+            aria-label="D"
             classes={{
               root: classes.root,
               checked: classes.checked,
@@ -102,11 +63,11 @@ class RateToilet extends React.Component {
           </div>
           <div className='genderSpace'><img src={MehBroom} alt="MehBroom" height="150vh"/>
           <Radio
-            checked={this.state.selectedValue === 'b'}
+            checked={this.state.selectedValue === 'e'}
             onChange={this.handleChange}
-            value="b"
+            value="e"
             name="radio-button-demo"
-            aria-label="B"
+            aria-label="E"
             classes={{
               root: classes.root,
               checked: classes.checked,
@@ -115,11 +76,11 @@ class RateToilet extends React.Component {
           </div>
           <div className='genderSpace'><img src={SadBroom} alt="SadBroom" height="150vh"/>
           <Radio
-            checked={this.state.selectedValue === 'c'}
+            checked={this.state.selectedValue === 'f'}
             onChange={this.handleChange}
-            value="c"
+            value="f"
             name="radio-button-demo"
-            aria-label="C"
+            aria-label="F"
             classes={{
               root: classes.root,
               checked: classes.checked,
@@ -128,94 +89,14 @@ class RateToilet extends React.Component {
           </div>
           </div>
 
+          Hand Washing Capabilities
+          <Sink/>
 
+          Hand Drying Capabilities
+          <Air/>
 
-          <div class='noWrapFlex'>
-            <div className='genderSpace'><img src={HappySink} alt="HappySink" height="150vh"/>
-            <Radio
-              checked={this.state.selectedValue === 'a'}
-              onChange={this.handleChange}
-              value="a"
-              name="radio-button-demo"
-              aria-label="A"
-              classes={{
-                root: classes.root,
-                checked: classes.checked,
-              }}
-            />
-            </div>
-            <div className='genderSpace'><img src={MehSink} alt="MehSink" height="150vh"/>
-            <Radio
-              checked={this.state.selectedValue === 'b'}
-              onChange={this.handleChange}
-              value="b"
-              name="radio-button-demo"
-              aria-label="B"
-              classes={{
-                root: classes.root,
-                checked: classes.checked,
-              }}
-            />
-            </div>
-            <div className='genderSpace'><img src={SadSink} alt="SadSink" height="150vh"/>
-            <Radio
-              checked={this.state.selectedValue === 'c'}
-              onChange={this.handleChange}
-              value="c"
-              name="radio-button-demo"
-              aria-label="C"
-              classes={{
-                root: classes.root,
-                checked: classes.checked,
-              }}
-            />
-            </div>
-            </div>
-
-
-
-            <div class='noWrapFlex'>
-              <div className='genderSpace'><img src={HappyAir} alt="HappyAir" height="150vh"/>
-              <Radio
-                checked={this.state.selectedValue === 'a'}
-                onChange={this.handleChange}
-                value="a"
-                name="radio-button-demo"
-                aria-label="A"
-                classes={{
-                  root: classes.root,
-                  checked: classes.checked,
-                }}
-              />
-              </div>
-              <div className='genderSpace'><img src={MehAir} alt="MehAir" height="150vh"/>
-              <Radio
-                checked={this.state.selectedValue === 'b'}
-                onChange={this.handleChange}
-                value="b"
-                name="radio-button-demo"
-                aria-label="B"
-                classes={{
-                  root: classes.root,
-                  checked: classes.checked,
-                }}
-              />
-              </div>
-              <div className='genderSpace'><img src={SadAir} alt="SadAir" height="150vh"/>
-              <Radio
-                checked={this.state.selectedValue === 'c'}
-                onChange={this.handleChange}
-                value="c"
-                name="radio-button-demo"
-                aria-label="C"
-                classes={{
-                  root: classes.root,
-                  checked: classes.checked,
-                }}
-              />
-              </div>
-              </div>
-
+          Odor
+          <Nose/>
 
 </div>
     );

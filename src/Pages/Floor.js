@@ -10,7 +10,7 @@ class Floor extends React.Component {
     return (
   <div>
 
-        Quantity (between -1 and 36, 0 for ground, -1 for basement):
+        Floor (between -1 and 36, 0 for ground, -1 for basement):
         <input type="number" name="quantity" min="-1" max="36"/>
 
   </div>

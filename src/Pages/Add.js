@@ -45,7 +45,7 @@ const styles = theme => ({
 
 
 function getSteps() {
-  return ['Building', 'Gender of Bathroom', 'Floor', 'Rate the Toilet', 'Poop Experience', 'Photos'];
+  return ['Building', 'Gender of Bathroom', 'Floor', 'Rate the Toilet', 'Poop Experience', 'Rate Your Experience'];
 }
 
 function getStepContent(step) {
@@ -64,7 +64,7 @@ function getStepContent(step) {
       return <PoopieBoy/>;
 
     default:
-      return 'Unknown step';
+      return 'Oops you stumbled across a poop';
   }
 }
 
