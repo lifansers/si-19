@@ -5,9 +5,9 @@ import brown from '@material-ui/core/colors/brown';
 import Radio from '@material-ui/core/Radio';
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked';
 import RadioButtonCheckedIcon from '@material-ui/icons/RadioButtonChecked';
-import male from '../male.PNG';
-import female from '../female.PNG';
-import unisex from '../unisex.PNG';
+import HappyNose from '../Poops/HappyNose.jpg';
+import MehNose from '../Poops/MehNose.jpg';
+import SadNose from '../Poops/SadNose.jpg';
 
 const styles = {
   root: {
@@ -19,7 +19,7 @@ const styles = {
   checked: {},
 };
 
-class Gender extends React.Component {
+class Nose extends React.Component {
   state = {
     selectedValue: 'a',
   };
@@ -32,8 +32,10 @@ class Gender extends React.Component {
     const { classes } = this.props;
 
     return (
+      <div>
+
       <div class='noWrapFlex'>
-        <div className='genderSpace'><img src={female} alt="female" height="150vh"/>
+        <div className='genderSpace'><img src={HappyNose} alt="HappyNose" height="150vh"/>
         <Radio
           checked={this.state.selectedValue === 'a'}
           onChange={this.handleChange}
@@ -46,8 +48,7 @@ class Gender extends React.Component {
           }}
         />
         </div>
-
-        <div className='genderSpace'><img src={male} alt="male" height="150vh"/>
+        <div className='genderSpace'><img src={MehNose} alt="MehNose" height="150vh"/>
         <Radio
           checked={this.state.selectedValue === 'b'}
           onChange={this.handleChange}
@@ -60,8 +61,7 @@ class Gender extends React.Component {
           }}
         />
         </div>
-
-        <div className='genderSpace'><img src={unisex} alt="unisex" height="150vh"/>
+        <div className='genderSpace'><img src={SadNose} alt="SadNose" height="150vh"/>
         <Radio
           checked={this.state.selectedValue === 'c'}
           onChange={this.handleChange}
@@ -74,14 +74,12 @@ class Gender extends React.Component {
           }}
         />
         </div>
+        </div>
 
-      </div>
+</div>
     );
   }
 }
 
-Gender.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
 
-export default withStyles(styles)(Gender);
+export default withStyles(styles)(Nose);

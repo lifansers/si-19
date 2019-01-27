@@ -21,6 +21,10 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import BuildingList from "./BuildingList.js";
 import Gender from "./Gender.js";
+import Floor from "./Floor.js";
+import PoopExperience from "./PoopExperience.js";
+import RateToilet from "./RateToilet.js"
+import PoopieBoy from "./PoopieBoy.js";
 
 const styles = theme => ({
   root: {
@@ -41,7 +45,7 @@ const styles = theme => ({
 
 
 function getSteps() {
-  return ['Building', 'Gender of Bathroom', 'Floor', 'Rate the Toilet', 'Poop Experience', 'Photos'];
+  return ['Building', 'Gender of Bathroom', 'Floor', 'Rate the Toilet', 'Poop Experience', 'Rate Your Experience'];
 }
 
 function getStepContent(step) {
@@ -51,16 +55,16 @@ function getStepContent(step) {
     case 1:
       return <Gender/>;
     case 2:
-      return `Floor selection thingy`;
+      return <Floor/>;
     case 3:
-      return 'Rating toilets pics';
+      return <RateToilet/>;
     case 4:
-      return 'Poop experience text box';
+      return <PoopExperience/>;
     case 5:
-      return 'Photos';
+      return <PoopieBoy/>;
 
     default:
-      return 'Unknown step';
+      return 'Oops you stumbled across a poop';
   }
 }
 
@@ -94,6 +98,7 @@ render(){
   const { activeStep } = this.state;
 
   return (
+    <div className='addHome'><div className='rateToilet'>
     <div className={classes.root}>
 
        <Stepper activeStep={activeStep} orientation="vertical">
@@ -134,6 +139,7 @@ render(){
          </Paper>
        )}
 
+    </div></div>
     </div>
   );
 }
