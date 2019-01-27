@@ -30,14 +30,15 @@ import Chip from '@material-ui/core/Chip';
 
 const styles = theme => ({
   appBar: {
-    backgroundColor:'#78909c' ,
+
+    background: "#B6E1F1",
     position: 'relative',
   },
   icon: {
     marginRight: theme.spacing.unit * 2,
   },
   root: {
-    backgroundColor: '#795548',
+    backgroundColor: '#fafafa',
   },
 
   card: {
@@ -119,7 +120,7 @@ function Search(props) {
           </div>
           <Divider variant="middle" />
           <div className={classes.section2}>
-            <Typography gutterBottom variant="h6">
+            <Typography gutterBottom color="#3e2723" variant="h6">
               Select sorted by
             </Typography>
             <div>
@@ -180,7 +181,7 @@ function Search(props) {
 
           </div>
           <div className={classes.section3}>
-            <Button variant="contained" color="#424242" fullWidth>
+            <Button variant="contained" color="#757575" fullWidth>
               Write a review
             </Button>
           </div>
