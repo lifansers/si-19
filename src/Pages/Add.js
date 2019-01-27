@@ -23,6 +23,7 @@ import BuildingList from "./BuildingList.js";
 import Gender from "./Gender.js";
 import Floor from "./Floor.js";
 import PoopExperience from "./PoopExperience.js";
+import RateToilet from "./RateToilet.js"
 import PoopieBoy from "./PoopieBoy.js";
 
 const styles = theme => ({
@@ -56,7 +57,7 @@ function getStepContent(step) {
     case 2:
       return <Floor/>;
     case 3:
-      return 'Rating toilets pics';
+      return <RateToilet/>;
     case 4:
       return <PoopExperience/>;
     case 5:
