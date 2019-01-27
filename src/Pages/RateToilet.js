@@ -45,7 +45,7 @@ class RateToilet extends React.Component {
 
     return (
       <div>
-
+      <br/>
       Cleanliness
       <div class='noWrapFlex'>
           <div className='genderSpace'><img src={HappyBroom} alt="HappyBroom" height="150vh"/>

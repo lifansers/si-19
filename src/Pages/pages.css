@@ -2,6 +2,7 @@
   position:relative;
   height: 20vh;
   width: 100%;
+  background-image: url(../toiletbackground.PNG);
 }
 
 .bottomHome{
@@ -13,6 +14,7 @@
   float: center;
   align-items: center;
   display: flex;
+  background-image: url(../cleartoilets.png);
 }
 
 .toiletsHome{
@@ -21,13 +23,14 @@
   padding-top: 2vh;
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 100%;
   padding-left: 1vw;
   padding-right: 1vw;
 }
 
 .addHome{
   position: relative;
+    background-image: url(../toiletbackground.PNG);
   /* justify-content: center; */
   padding-top: 2vh;
   display: flex;
@@ -35,6 +38,16 @@
   width: 80%;
   padding-left: 10vw;
   padding-right: 10vw;
+  padding-bottom: 25vh;
+}
+
+.titleBar{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 5vh;
+  padding: 2vh;
+  font-family:Impact, Charcoal, sans-serif
 }
 
 .findToilet{
@@ -59,4 +72,14 @@
   display: flex;
   flex-wrap: wrap;
   /* width: 90%; */
+}
+
+.adLeft{
+  padding-right:5%;
+  padding-top: 2%;
+}
+
+.adRight{
+  padding-left:5%;
+  padding-top: 2%;
 }
